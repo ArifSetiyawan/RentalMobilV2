@@ -24,121 +24,11 @@
 			<marquee behavior="alternate">
 				<h2 style="color: black;"><b>Selamat datang di Rental Mobil UBSI MARGONDA</b></h2>
 			</marquee>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="card card-danger">
-						<div class="card-header">
-							<div class="card-title">
-								My Teams
-							</div>
-						</div>
-						<div class="card-body pb-0">
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="card bg-light">
-										<div class="card-header text-muted border-bottom-0">
-											12.3D.01 / 12200456
-										</div>
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-7">
-													<h2 class="lead"><b>Farhana</b></h2>
-													<p class="text-muted text-sm"></p>
-													<ul class="ml-4 mb-0 fa-ul text-muted">
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
-													</ul>
-												</div>
-												<div class="col-5 text-center">
-													<img src="../public/asset/images/user-1.jpeg" alt="" class="img-circle img-fluid">
-												</div>
-											</div>
-										</div>
-										<div class="card-footer">
-											<div class="text-right">
-												<a href="#" class="btn btn-sm bg-teal">
-													<i class="fas fa-comments"></i>
-												</a>
-												<a href="#" class="btn btn-sm btn-primary">
-													<i class="fas fa-user"></i> View Profile
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="card bg-light">
-										<div class="card-header text-muted border-bottom-0">
-											12.3D.01 / 12200943
-										</div>
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-7">
-													<h2 class="lead"><b>Muhammad Arif Setiyawan</b></h2>
-													<p class="text-muted text-sm"></p>
-													<ul class="ml-4 mb-0 fa-ul text-muted">
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
-													</ul>
-												</div>
-												<div class="col-5 text-center">
-													<img src="../public/asset/images/user-2.jpeg" alt="" class="img-circle img-fluid">
-												</div>
-											</div>
-										</div>
-										<div class="card-footer">
-											<div class="text-right">
-												<a href="#" class="btn btn-sm bg-teal">
-													<i class="fas fa-comments"></i>
-												</a>
-												<a href="#" class="btn btn-sm btn-primary">
-													<i class="fas fa-user"></i> View Profile
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="card bg-light">
-										<div class="card-header text-muted border-bottom-0">
-											12.3D.01 / 12200064
-										</div>
-										<div class="card-body pt-0">
-											<div class="row">
-												<div class="col-7">
-													<h2 class="lead"><b>Muhammad Daniel Nurindra</b></h2>
-													<p class="text-muted text-sm"></p>
-													<ul class="ml-4 mb-0 fa-ul text-muted">
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
-													</ul>
-												</div>
-												<div class="col-5 text-center">
-													<img src="../public/asset/images/user-2.jpeg" alt="" class="img-circle img-fluid">
-												</div>
-											</div>
-										</div>
-										<div class="card-footer">
-											<div class="text-right">
-												<a href="#" class="btn btn-sm bg-teal">
-													<i class="fas fa-comments"></i>
-												</a>
-												<a href="#" class="btn btn-sm btn-primary">
-													<i class="fas fa-user"></i> View Profile
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="col-sm-12">
 					<div class="card card-primary">
 						<div class="card-header">
 							<div class="card-title">
-								Gallery
+								Promo & Event Bulan Ini
 							</div>
 						</div>
 						<div class="card-body">
@@ -172,6 +62,113 @@
 									<a href="#" data-toggle="lightbox" data-title="sample 5 - black" data-gallery="gallery">
 										<img src="<?php echo base_url(); ?>assets/images/mobil-7.jpeg" class="img-fluid mb-2" alt="black sample" />
 									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<div class="col-sm-12">
+					<div class="card card-danger">
+						<div class="card-header">
+							<div class="card-title">
+								Our Team
+							</div>
+						</div>
+						<div class="card-body pb-0">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="card bg-light">
+										<div class="card-header text-muted border-bottom-0">
+											12.3D.01 / 12200456
+										</div>
+										<div class="card-body pt-0">
+											<div class="row">
+												<div class="col-7">
+													<h2 class="lead"><b>Farhana</b></h2>
+													<p class="text-muted text-sm"></p>
+													<ul class="ml-4 mb-0 fa-ul text-muted">
+														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> https://github.com/frhana</li>
+													</ul>
+												</div>
+												<div class="col-5 text-center">
+													<img src="../public/asset/images/user-1.jpeg" alt="" class="img-circle img-fluid">
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="text-right">
+												<a href="#" class="btn btn-sm bg-teal">
+													<i class="fas fa-comments"></i>
+												</a>
+												<a href="#" class="btn btn-sm btn-primary">
+													<i class="fas fa-user"></i> View Profile
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="card bg-light">
+										<div class="card-header text-muted border-bottom-0">
+											12.3D.01 / 12200943
+										</div>
+										<div class="card-body pt-0">
+											<div class="row">
+												<div class="col-7">
+													<h2 class="lead"><b>Muhammad Arif Setiyawan</b></h2>
+													<p class="text-muted text-sm"></p>
+													<ul class="ml-4 mb-0 fa-ul text-muted">
+														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span>https://github.com/ArifSetiyawan</li>
+													</ul>
+												</div>
+												<div class="col-5 text-center">
+													<img src="../public/asset/images/user-2.jpeg" alt="" class="img-circle img-fluid">
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="text-right">
+												<a href="#" class="btn btn-sm bg-teal">
+													<i class="fas fa-comments"></i>
+												</a>
+												<a href="#" class="btn btn-sm btn-primary">
+													<i class="fas fa-user"></i> View Profile
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="card bg-light">
+										<div class="card-header text-muted border-bottom-0">
+											12.3D.01 / 12200064
+										</div>
+										<div class="card-body pt-0">
+											<div class="row">
+												<div class="col-7">
+													<h2 class="lead"><b>Muhammad Daniel Nurindra</b></h2>
+													<p class="text-muted text-sm"></p>
+													<ul class="ml-4 mb-0 fa-ul text-muted">
+														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> https://github.com/BarrenLand</li>
+													</ul>
+												</div>
+												<div class="col-5 text-center">
+													<img src="../public/asset/images/user-2.jpeg" alt="" class="img-circle img-fluid">
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="text-right">
+												<a href="#" class="btn btn-sm bg-teal">
+													<i class="fas fa-comments"></i>
+												</a>
+												<a href="#" class="btn btn-sm btn-primary">
+													<i class="fas fa-user"></i> View Profile
+												</a>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
