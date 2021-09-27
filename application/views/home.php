@@ -37,7 +37,7 @@
 								<div class="col-sm-4">
 									<div class="card bg-light">
 										<div class="card-header text-muted border-bottom-0">
-											12.2D.01 / 12200456
+											12.3D.01 / 12200456
 										</div>
 										<div class="card-body pt-0">
 											<div class="row">
@@ -69,7 +69,7 @@
 								<div class="col-sm-4">
 									<div class="card bg-light">
 										<div class="card-header text-muted border-bottom-0">
-											12.2D.01 / 12200943
+											12.3D.01 / 12200943
 										</div>
 										<div class="card-body pt-0">
 											<div class="row">
@@ -101,7 +101,7 @@
 								<div class="col-sm-4">
 									<div class="card bg-light">
 										<div class="card-header text-muted border-bottom-0">
-											12.2D.01 / 12200064
+											12.3D.01 / 12200064
 										</div>
 										<div class="card-body pt-0">
 											<div class="row">
