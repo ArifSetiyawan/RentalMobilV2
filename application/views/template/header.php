@@ -20,6 +20,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- JQVMap -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/jqvmap/jqvmap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatable/datatables.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatable/responsive.dataTables.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->

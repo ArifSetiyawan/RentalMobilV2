@@ -6,6 +6,11 @@
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
+<script src="<?php echo base_url(); ?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+
+<!-- DataTables -->
+<script src="<?php echo base_url(); ?>assets/plugins/datatable/datatables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/datatable/dataTables.responsive.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
@@ -30,5 +35,47 @@
 <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard.js"></script>
+<script>
+    $(function() {
+        $("#data-users").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
+<?php if ($this->session->flashdata('success')) : ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            swal("Success!", "<?php echo $_SESSION['success'] ?>", "success");
+        });
+    </script>
+<?php endif; ?>
+<?php if ($this->session->flashdata('error')) : ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            swal("Sorry!", "<?php echo $_SESSION['error'] ?>", "error");
+        });
+    </script>
+<?php endif; ?>
+<?php if ($this->session->flashdata('warning')) : ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            swal("Warning!", "<?php echo $_SESSION['warning'] ?>", "warning");
+        });
+    </script>
+<?php endif; ?>
+<?php if ($this->session->flashdata('info')) : ?>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            swal("Info!", "<?php echo $_SESSION['info'] ?>", "info");
+        });
+    </script>
+<?php endif; ?>
