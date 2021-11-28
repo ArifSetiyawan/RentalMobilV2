@@ -131,11 +131,30 @@
 					<div class="card card-info">
 						<div class="card-header">
 							<div class="card-title">
-								Our Team
+								Sekilas tentang kami
 							</div>
 						</div>
-						<div class="card-body pb-0">
-							
+						<div class="card-body">
+							<ul class="list-unstyled">
+								<li>Web dibuat untuk menyelesaikan tugas web programming 2 
+									untuk memenuhi tugas akhir semester 3 dan sebagai pengganti uas.
+									Web ini juga berfungsi sebagai portofolio bagi kami untuk 
+									keperluan pribadi di masa depan.</li>
+								<p></p>
+								<li>Web ini dibuat menggunakan Codeigniter 3 sebagai basis
+									dan menggunakan basis yang hampir sama dengan tugas harian
+									kami.</li>
+								<p></p>
+								<li>Asset yang kami gunakan kebanyakan kami ambil dari Drivetribe, StanceNation, Shutterstock, dan Autobild</li>
+								<p></p>
+								<br></br>
+								<p></p>
+								<br></br>
+								<p></p>
+								<br></br>
+								<br></br>
+								<br></br>
+								<br></br>
 						</div>
 					</div>
 				</div>
@@ -148,21 +167,39 @@
 						</div>
 						<div class="card-body">
 							<ul class="list-unstyled">
-								<li>Lorem ipsum dolor sit amet</li>
-								<li>Consectetur adipiscing elit</li>
-								<li>Integer molestie lorem at massa</li>
-								<li>Facilisis in pretium nisl aliquet</li>
-								<li>Nulla volutpat aliquam velit
+								<li>A. Pribadi/Perseorangan</li>
+								<p></p>
 									<ul>
-										<li>Phasellus iaculis neque</li>
-										<li>Purus sodales ultricies</li>
-										<li>Vestibulum laoreet porttitor sem</li>
-										<li>Ac tristique libero volutpat at</li>
+									<li>Minimal sewa 3 hari</li>
+									<li>KTP Suami dan Istri</li>
+									<li>Kartu Keluarga (KK)</li>
+									<li>Rekening Listrik / Telpon Rumah</li>
+									<li>PBB (Tanda Bukti Kepemilikan Rumah)</li>
+									<li>Identitas Pegawai (ID Card Kantor)</li>
+									<li>SIM yang masih berlaku</li>
+									<li>Bersedia di Survei untuk verifikasi data</li>
+									<li>Foto Dokumen asli wajib di kirim via email/whatsapp</li>	
 									</ul>
+									<p></p>
 								</li>
-								<li>Faucibus porta lacus fringilla vel</li>
-								<li>Aenean sit amet erat nunc</li>
-								<li>Eget porttitor lorem</li>
+								<li>B. Perusahaan/Korporasi</li>
+								<p></p>
+									<ul>
+									<li>Minimal sewa 3 hari - SIUP, NPWP, TDP, Surat Keterangan Domisili</li>
+									<li>NIB</li>
+									<li>KTP Direktur & Manager</li>
+									<li>SIM Supir</li>
+									<li>Bersedia di Survei untuk verifikasi data</li>
+									<li>Foto Dokumen asli wajib di kirim via email/whatsapp</li>	
+									</ul>
+									<p></p>
+								</li>
+								<li>C. Ketentuan Lain</li>
+								<p></p>
+									<ul>
+									<li>Bersedia mentandatangani surat perjanjian sewa menyewa mobil diatas materai</li>
+									<li>Bersedia membayar biaya tambahan antar dan jemput mobil</li>
+								</li>
 							</ul>
 						</div>
 					</div>
