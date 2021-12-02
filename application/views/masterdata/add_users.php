@@ -26,7 +26,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form">
+                        <form action="<?php echo base_url('masterdata/simpan_data_user');?>" method ="post">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Email address</label>

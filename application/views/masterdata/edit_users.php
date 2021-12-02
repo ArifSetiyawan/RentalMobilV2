@@ -26,26 +26,23 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form role="form">
+                        <form action="<?php echo base_url('masterdata/update_data_user'); ?>" method="post">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Email address</label>
+                                    <input type="hidden" name="idUsers" value="<?php echo $data_users['id_user'] ?>">
                                     <input type="email" class="form-control" name="email" value="<?php echo isset($data_users['email']) ? $data_users['email'] : ''; ?>" placeholder="Enter email">
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control" name="password" value="<?php echo isset($data_users['password']) ? $data_users['password'] : ''; ?>" placeholder="Password">
-                                </div>
-                                <div class="form-group">
                                     <label>Role User</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="roleUser">
                                         <option value="1" <?php echo isset($data_users['role']) ? ('1' == $data_users['role'] ? 'selected' : '') : ''; ?>>Superadmin</option>
                                         <option value="2" <?php echo isset($data_users['role']) ? ('2' == $data_users['role'] ? 'selected' : '') : ''; ?>>Pelanggan</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Status User</label>
-                                    <select class="form-control">
+                                    <select class="form-control" name="statusUser">
                                         <option value="1" <?php echo isset($data_users['isAktif']) ? ('1' == $data_users['isAktif'] ? 'selected' : '') : ''; ?>>Aktif</option>
                                         <option value="0" <?php echo isset($data_users['isAktif']) ? ('0' == $data_users['isAktif'] ? 'selected' : '') : ''; ?>>Non Aktif</option>
                                     </select>
@@ -55,13 +52,15 @@
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Save data</button>
+                                <a href="<?php echo base_url('masterdata/users'); ?>"><button type="button" class="btn btn-danger">batal</button></a>
                             </div>
-                        </form>
                     </div>
+                    </form>
                 </div>
             </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+        </div>
+        <!-- /.row -->
+</div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
 </div>

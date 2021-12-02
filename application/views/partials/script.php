@@ -36,8 +36,13 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard.js"></script>
 <script>
-    $(function() {
-        $("#data-users").DataTable();
+    $(document).ready(function() {
+        $.extend($.fn.dataTable.defaults, {
+            responsive: true
+        });
+        $("#data-users").DataTable({
+            "responsive": true,
+        });
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,

@@ -2,14 +2,14 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-header">RENTCAR MENU</li>
         <li class="nav-item">
-            <a href="<?php echo base_url(); ?>welcome" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="<?php echo base_url(); ?>welcome" class="nav-link <?php echo $this->uri->segment(1) == 'welcome' ? 'active' : ''; ?>">
+                <i class=" nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
                 </p>
             </a>
         </li>
-        <li class="nav-item has-treeview">
+        <li class="nav-item <?php echo $this->uri->segment(1) == 'masterdata' ? 'menu-open' : 'has-treeview'; ?>">
             <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
@@ -19,19 +19,19 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="pages/forms/general.html" class="nav-link">
+                    <a href="<?php echo base_url(); ?>masterdata/datamobil" class="nav-link <?php echo $this->uri->segment(2) == 'datamobil' ? 'active' : ''; ?>">
                         <i class="nav-icon far fa-circle text-danger"></i>
                         <p>Mobil</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>masterdata/users" class="nav-link">
+                    <a href="<?php echo base_url(); ?>masterdata/users" class="nav-link <?php echo $this->uri->segment(2) == 'users' || $this->uri->segment(2) == 'add_users' || $this->uri->segment(2) == 'edit_users' ? 'active' : ''; ?>">
                         <i class="nav-icon far fa-circle text-info"></i>
                         <p>User Login</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/forms/editors.html" class="nav-link">
+                    <a href="<?php echo base_url(); ?>masterdata/pelanggan" class="nav-link <?php echo $this->uri->segment(2) == 'pelanggan' || $this->uri->segment(2) == 'add_pelanggan' || $this->uri->segment(2) == 'edit_pelanggan' ? 'active' : ''; ?>">
                         <i class="nav-icon far fa-circle text-warning"></i>
                         <p>Pelanggan</p>
                     </a>
