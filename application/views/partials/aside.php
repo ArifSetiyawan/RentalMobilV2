@@ -1,3 +1,11 @@
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        <img src="<?php echo base_url() ?>/assets/images/man.png" class="img-circle elevation-2" alt="User Image">
+    </div>
+    <div class="info">
+        <a href="#" class="d-block"><?php echo $_SESSION['email'][0] ?></a>
+    </div>
+</div>
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-header">RENTCAR MENU</li>
@@ -9,35 +17,37 @@
                 </p>
             </a>
         </li>
-        <li class="nav-item <?php echo $this->uri->segment(1) == 'masterdata' ? 'menu-open' : 'has-treeview'; ?>">
-            <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                    Master Data
-                    <i class="fas fa-angle-left right"></i>
-                </p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>masterdata/datamobil" class="nav-link <?php echo $this->uri->segment(2) == 'datamobil' ? 'active' : ''; ?>">
-                        <i class="nav-icon far fa-circle text-danger"></i>
-                        <p>Mobil</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>masterdata/users" class="nav-link <?php echo $this->uri->segment(2) == 'users' || $this->uri->segment(2) == 'add_users' || $this->uri->segment(2) == 'edit_users' ? 'active' : ''; ?>">
-                        <i class="nav-icon far fa-circle text-info"></i>
-                        <p>User Login</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?php echo base_url(); ?>masterdata/pelanggan" class="nav-link <?php echo $this->uri->segment(2) == 'pelanggan' || $this->uri->segment(2) == 'add_pelanggan' || $this->uri->segment(2) == 'edit_pelanggan' ? 'active' : ''; ?>">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Pelanggan</p>
-                    </a>
-                </li>
-            </ul>
-        </li>
+        <?php if ($_SESSION['role'] == 1) { ?>
+            <li class="nav-item <?php echo $this->uri->segment(1) == 'masterdata' ? 'menu-open' : 'has-treeview'; ?>">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-edit"></i>
+                    <p>
+                        Master Data
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>masterdata/datamobil" class="nav-link <?php echo $this->uri->segment(2) == 'datamobil' ? 'active' : ''; ?>">
+                            <i class="nav-icon far fa-circle text-danger"></i>
+                            <p>Mobil</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>masterdata/users" class="nav-link <?php echo $this->uri->segment(2) == 'users' || $this->uri->segment(2) == 'add_users' || $this->uri->segment(2) == 'edit_users' ? 'active' : ''; ?>">
+                            <i class="nav-icon far fa-circle text-info"></i>
+                            <p>User Login</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url(); ?>masterdata/pelanggan" class="nav-link <?php echo $this->uri->segment(2) == 'pelanggan' || $this->uri->segment(2) == 'add_pelanggan' || $this->uri->segment(2) == 'edit_pelanggan' ? 'active' : ''; ?>">
+                            <i class="nav-icon far fa-circle text-warning"></i>
+                            <p>Pelanggan</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        <?php } ?>
         <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>

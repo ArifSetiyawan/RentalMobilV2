@@ -56,7 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <i class="far fa-user"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <a href="./auth/logout.php" class="dropdown-item">Logout</a>
+                        <a href="<?php echo base_url('auth/logout') ?>" class="dropdown-item">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -67,7 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">UBSI RentCar</span>
+                <span class="brand-text font-weight-light"><b>RENTCAR 2021</b></span>
             </a>
 
             <!-- Sidebar -->
@@ -81,7 +81,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         <?php echo $body; ?>
 
-
+        <footer class="main-footer">
+            <strong>UBSI RENTAL MOBIL 2021</strong>
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Web Programming 2</b>
+            </div>
+        </footer>
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->

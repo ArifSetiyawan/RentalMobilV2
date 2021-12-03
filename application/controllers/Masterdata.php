@@ -11,9 +11,25 @@ class Masterdata extends CI_Controller
         // $this->load->model('Auth', 'authorization');
     }
 
+    function validate_user()
+    {
+        $user_access = $this->session->userdata();
+
+        if ($user_access != null) {
+            if ($user_access['email'] == null) {
+                $this->session->set_flashdata('warning', 'Maaf Anda Harus Login kembali');
+                redirect('auth');
+            }
+        } else {
+            $this->session->set_flashdata('warning', 'Maaf Anda Harus Login kembali');
+            redirect('auth');
+        }
+
+        return $user_access;
+    }
     public function users()
     {
-        // $this->validate_user();
+        $this->validate_user();
         $data = array(
             'title' => "Data Users",
             'active_menu' => 'data_users',
@@ -26,7 +42,7 @@ class Masterdata extends CI_Controller
 
     public function add_users()
     {
-        // $this->validate_user();
+        $this->validate_user();
 
         $data = array(
             'title' => "Master Data",
@@ -40,7 +56,7 @@ class Masterdata extends CI_Controller
 
     public function edit_users($id)
     {
-        // $this->validate_user();
+        $this->validate_user();
         $hasil = $this->model_master->getWhere('users', ['sha1(id_user)' => $id])->row_array();
 
         $data = array(
@@ -59,7 +75,7 @@ class Masterdata extends CI_Controller
 
     public function edit_pelanggan($id)
     {
-        // $this->validate_user();
+        $this->validate_user();
         $hasil = $this->model_master->getWhere('m_pelanggan', ['sha1(id_pelanggan)' => $id])->row_array();
 
         $data = array(
@@ -94,7 +110,7 @@ class Masterdata extends CI_Controller
 
     public function pelanggan()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $data = array(
             'title' => "Data Pelanggan",
             'active_menu' => 'data_pelanggan',
@@ -107,7 +123,7 @@ class Masterdata extends CI_Controller
 
     public function simpan_data_user()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $data = [
             'email' => $this->input->post('email', true),
             'password' => sha1($this->input->post('password', true)),
@@ -122,7 +138,7 @@ class Masterdata extends CI_Controller
 
     public function update_data_user()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $id = $this->input->post('idUsers', true);
         $where = ['id_user' => $id];
 
@@ -139,7 +155,7 @@ class Masterdata extends CI_Controller
 
     public function update_data_pelanggan()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $id = $this->input->post('idPel', true);
         $where = ['id_pelanggan' => $id];
 
@@ -160,7 +176,7 @@ class Masterdata extends CI_Controller
 
     public function add_pelanggan()
     {
-        // $this->validate_user();
+        $this->validate_user();
 
         $data = array(
             'title' => "Master Data Pelanggan",
@@ -174,7 +190,7 @@ class Masterdata extends CI_Controller
 
     public function simpan_data_pelanggan()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $data = [
             'nama' => $this->input->post('nama', true),
             'alamat' => $this->input->post('alamat', true),
@@ -192,7 +208,7 @@ class Masterdata extends CI_Controller
 
     public function datamobil()
     {
-        // $this->validate_users();
+        $this->validate_user();
         $data = array(
             'title' => "Data Mobil",
             'active_menu' => 'data_mobil',
@@ -205,7 +221,7 @@ class Masterdata extends CI_Controller
 
     public function add_mobil()
     {
-        // $this->validate_user();
+        $this->validate_user();
 
         $data = array(
             'title' => "Data Mobil",
@@ -215,5 +231,38 @@ class Masterdata extends CI_Controller
 
         $this->load->library('template');
         $this->template->loadx('master', 'masterdata/add_mobil', $data);
+    }
+
+    public function simpan_data_mobil()
+    {
+        // the user id contain dot, so we must remove it
+        $file_name = str_replace('.', '', $_SESSION['email'][0] . rand());
+        $config['upload_path']          = FCPATH . '/upload/mobil/';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png';
+        $config['file_name']            = $file_name;
+        $config['overwrite']            = true;
+        $config['max_size']             = 1024; // 1MB
+        $config['max_width']            = 1080;
+        $config['max_height']           = 1080;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('carfile')) {
+            $data['error'] = $this->upload->display_errors();
+        } else {
+            $uploaded_data = $this->upload->data();
+
+            $data_save = [
+                'nama_mobil' => $this->input->post('nama_mobil', true),
+                'merek' => $this->input->post('merek', true),
+                'nopol' => $this->input->post('nopol', true),
+                'tahun_buat' => $this->input->post('tahun_buat', true),
+                'kapasitas' => $this->input->post('kapasitas', true),
+                'img_mobil' => $uploaded_data['file_name'],
+            ];
+            $this->model_master->simpanData('m_mobil', $data_save);
+            $this->session->set_flashdata('success', 'Data Mobil berhasil disimpan');
+            redirect('masterdata/datamobil');
+        }
     }
 }

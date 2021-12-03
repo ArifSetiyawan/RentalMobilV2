@@ -45,32 +45,31 @@
                                         <th>Tahun Pembuatan</th>
                                         <th>Kapasitas</th>
                                         <th>Foto Mobil</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $no = 0;
-                                    foreach ($data_mobil as $data_mobil) {
+                                    foreach ($data_mobil as $mobil) {
                                     ?>
                                         <tr>
                                             <td><?php echo $no = $no + 1 ?></td>
-                                            <td><?php echo $data_mobil['email'] ?></td>
+                                            <td><?php echo $mobil['nama_mobil'] ?></td>
+                                            <td><?php echo $mobil['merek'] ?></td>
+                                            <td><?php echo $mobil['nopol'] ?></td>
+                                            <td><?php echo $mobil['tahun_buat'] ?></td>
+                                            <td><?php echo $mobil['kapasitas'] ?></td>
                                             <td>
-                                                <?php
-                                                if ($pelanggan['jenis_kelamin'] == 1) {
-                                                    echo 'Pria';
-                                                } else {
-                                                    echo 'Wanita';
-                                                }
-
-                                                ?>
+                                                <img src="<?php echo base_url() ?>/upload/mobil/<?php echo $mobil['img_mobil'] ?>" width="100">
                                             </td>
-                                            
+
+
                                             <td>
-                                                <a href="<?php echo base_url() ?>masterdata/edit_mobil/<?php echo sha1($data_mobil['m_mobil']) ?>" class="btn btn-icon btn-success" title="Edit">
+                                                <a href="<?php echo base_url() ?>masterdata/edit_mobil/<?php echo sha1($mobil['id_mobil']) ?>" class="btn btn-icon btn-success" title="Edit">
                                                     <i class="fa fa-pencil-alt"></i>
                                                 </a>
-                                                <a href="#" class="btn btn-icon btn-danger" title="Hapus" onclick="doDelete('<?php echo sha1($data_mobil['m_pelanggan']) ?>')">
+                                                <a href="#" class="btn btn-icon btn-danger" title="Hapus" onclick="doDelete('<?php echo sha1($mobil['id_mobil']) ?>')">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>

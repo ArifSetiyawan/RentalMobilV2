@@ -26,7 +26,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?php echo base_url('masterdata/simpan_data_mobil');?>" method ="post">
+                        <form action="<?php echo base_url('masterdata/simpan_data_mobil'); ?>" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama Mobil</label>
@@ -48,8 +48,12 @@
                                     <label>Kapasitas</label>
                                     <input type="text" class="form-control" name="kapasitas" placeholder="Masukkan Kapasitas Mobil">
                                 </div>
-                               
-                        <div style="clear:both;"></div>
+                                <div class="form-group">
+                                    <label>Upload Image</label>
+                                    <input type="file" name="carfile" size="20" class="form-control" accept="image/png, image/jpeg, image/jpg, image/gif">
+                                </div>
+
+                                <div style="clear:both;"></div>
                             </div>
                             <!-- /.card-body -->
 
