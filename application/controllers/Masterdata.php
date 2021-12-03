@@ -137,11 +137,11 @@ class Masterdata extends CI_Controller
         $id = $this->input->post('id_mobil', true);
         $where = ['id_mobil' => $id];
 
-        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $id])->row_array();
+        $hasil = $this->model_master->getWhere('m_mobil', ['id_mobil' => $id])->row_array();
+
         $imageUrl = FCPATH . '/upload/mobil/' . $hasil['img_mobil'];
 
         if (file_exists($imageUrl)) {
-
             unlink($imageUrl);
         }
 
@@ -171,6 +171,7 @@ class Masterdata extends CI_Controller
             ];
 
             $simpan = $this->model_master->updateData('m_mobil', $data, $where);
+
             $this->session->set_flashdata('success', "Data Mobil Berhasil Diubah");
             redirect('masterdata/datamobil');
         }
