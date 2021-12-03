@@ -26,7 +26,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?php echo base_url('masterdata/simpan_data_mobil'); ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo base_url('masterdata/updateMobil'); ?>" method="post" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama Mobil</label>
