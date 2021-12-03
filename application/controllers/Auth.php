@@ -32,7 +32,10 @@ class Auth extends CI_Controller
 
                 $sql = $this->model_master->getWhere('users', $array_input);
                 $cek_user = $sql->row_array();
-
+                // echo '<pre>';
+                // print_r($cek_user);
+                // echo '</pre>';
+                // die;
                 if (!$cek_user) {
                     $this->session->set_flashdata('warning', "Maaf Username atau Password Salah !!!");
                     redirect('auth');
@@ -42,8 +45,8 @@ class Auth extends CI_Controller
                         'email' => explode('@', $cek_user['email']),
                         'role' => $cek_user['role'],
                         'isAktif' => $cek_user['isAktif'],
-
                     ];
+
                     $this->session->set_userdata($data);
                     redirect('welcome');
                 }

@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Upload Image</label>
-                                    <input type="file" name="carfile" size="20" class="form-control" accept="image/png, image/jpeg, image/jpg, image/gif">
+                                    <input type="file" name="carfile" class="form-control">
                                 </div>
 
                                 <div style="clear:both;"></div>

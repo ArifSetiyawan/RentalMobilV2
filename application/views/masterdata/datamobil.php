@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>datamobil">Mobil</a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>welcome">Home</a></li>
                         <li class="breadcrumb-item active">Data Mobil</li>
                     </ol>
                 </div>
@@ -94,7 +94,7 @@
 <script>
     function doDelete(id) {
         swal({
-                title: "Delete Data Users ?",
+                title: "Delete Data Mobil ?",
                 text: "Data ini akan terhapus permanent",
                 icon: "warning",
                 buttons: true,
@@ -102,7 +102,7 @@
             })
             .then(ok => {
                 if (ok) {
-                    window.location.href = '<?php echo base_url() ?>masterdata/hapusUser/' + id;
+                    window.location.href = '<?php echo base_url() ?>masterdata/hapusMobil/' + id;
                 } else {
                     $(this).removeAttr('disabled')
                 }

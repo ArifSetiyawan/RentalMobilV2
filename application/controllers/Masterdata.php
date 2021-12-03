@@ -242,13 +242,13 @@ class Masterdata extends CI_Controller
         $config['file_name']            = $file_name;
         $config['overwrite']            = true;
         $config['max_size']             = 1024; // 1MB
-        $config['max_width']            = 1080;
-        $config['max_height']           = 1080;
+        $config['max_width']            = 1280;
+        $config['max_height']           = 1280;
 
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_upload('carfile')) {
-            $data['error'] = $this->upload->display_errors();
+            $this->session->set_flashdata('error', 'Data Gagal Upload');
         } else {
             $uploaded_data = $this->upload->data();
 
@@ -264,5 +264,20 @@ class Masterdata extends CI_Controller
             $this->session->set_flashdata('success', 'Data Mobil berhasil disimpan');
             redirect('masterdata/datamobil');
         }
+    }
+    public function hapusMobil()
+    {
+        $where = ['sha1(id_mobil)' => $this->uri->segment(3)];
+        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $this->uri->segment(3)])->row_array();
+        $imageUrl = FCPATH . '/upload/mobil/' . $hasil['img_mobil'];
+
+        if (file_exists($imageUrl)) {
+
+            unlink($imageUrl);
+        }
+
+        $this->model_master->hapusData('m_mobil', $where);
+        $this->session->set_flashdata('success', "Data Mobil Berhasil Dihapus");
+        redirect('masterdata/datamobil');
     }
 }
