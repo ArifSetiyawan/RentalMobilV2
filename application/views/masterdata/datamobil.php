@@ -94,7 +94,7 @@
 <script>
     function doDelete(id) {
         swal({
-                title: "Delete Data Users ?",
+                title: "Delete Data Mobil ?",
                 text: "Data ini akan terhapus permanent",
                 icon: "warning",
                 buttons: true,
@@ -102,7 +102,8 @@
             })
             .then(ok => {
                 if (ok) {
-                    window.location.href = '<?php echo base_url() ?>masterdata/hapusUser/' + id;
+                    window.location.href = '<?php echo base_url() ?>masterdata/hapusMobil/' + id;
+
                 } else {
                     $(this).removeAttr('disabled')
                 }

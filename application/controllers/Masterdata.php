@@ -73,6 +73,22 @@ class Masterdata extends CI_Controller
         $this->template->loadx('master', 'masterdata/edit_users', $data);
     }
 
+    public function edit_mobil($id)
+    {
+        $this->validate_user();
+        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $id])->row_array();
+
+        $data = array(
+            'title' => "Master Data",
+            'active_menu' => 'Users',
+            'sub_menu' => 'Input data mobil',
+            'data_mobil' => $hasil,
+        );
+
+        $this->load->library('template');
+        $this->template->loadx('master', 'masterdata/edit_mobil', $data);
+    }
+
     public function edit_pelanggan($id)
     {
         $this->validate_user();
@@ -99,6 +115,65 @@ class Masterdata extends CI_Controller
         $this->session->set_flashdata('success', "Data Users Berhasil Dihapus");
         redirect('masterdata/users');
     }
+
+    public function hapusMobil()
+    {
+        $where = ['sha1(id_mobil)' => $this->uri->segment(3)];
+        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $this->uri->segment(3)])->row_array();
+        $imageUrl = FCPATH . '/upload/mobil/' . $hasil['img_mobil'];
+
+        if (file_exists($imageUrl)) {
+
+            unlink($imageUrl);
+        }
+
+        $this->model_master->hapusData('m_mobil', $where);
+        $this->session->set_flashdata('success', "Data Mobil Berhasil Dihapus");
+        redirect('masterdata/datamobil');
+    }
+    public function updateMobil()
+    {
+        $this->validate_user();
+        $id = $this->input->post('id_mobil', true);
+        $where = ['id_mobil' => $id];
+
+        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $id])->row_array();
+        $imageUrl = FCPATH . '/upload/mobil/' . $hasil['img_mobil'];
+
+        if (file_exists($imageUrl)) {
+
+            unlink($imageUrl);
+        }
+
+        $file_name = str_replace('.', '', $_SESSION['email'][0] . rand());
+        $config['upload_path']          = FCPATH . '/upload/mobil/';
+        $config['allowed_types']        = 'jpg|jpeg|png';
+        $config['file_name']            = $file_name;
+        $config['overwrite']            = true;
+        $config['max_size']             = 3072;
+        $config['max_width']            = 2000;
+        $config['max_height']           = 2000;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('carfile')) {
+            $data['error'] = $this->upload->display_errors();
+        } else {
+            $uploaded_data = $this->upload->data();
+
+            $data = [
+                'nama_mobil' => $this->input->post('nama_mobil', true),
+                'merek' => $this->input->post('merek', true),
+                'nopol' => $this->input->post('nopol', true),
+                'tahun_buat' => $this->input->post('tahun_buat', true),
+                'kapasitas' => $this->input->post('kapasitas', true),
+                'img_mobil' => $uploaded_data['file_name'],
+            ];
+        
+        $simpan = $this->model_master->updateData('m_mobil', $data, $where);
+        $this->session->set_flashdata('success', "Data Mobil Berhasil Diubah");
+        redirect('masterdata/datamobil');
+    }}
 
     public function hapusPelanggan()
     {
@@ -241,9 +316,9 @@ class Masterdata extends CI_Controller
         $config['allowed_types']        = 'gif|jpg|jpeg|png';
         $config['file_name']            = $file_name;
         $config['overwrite']            = true;
-        $config['max_size']             = 1024; // 1MB
-        $config['max_width']            = 1080;
-        $config['max_height']           = 1080;
+        $config['max_size']             = 3072;
+        $config['max_width']            = 2000;
+        $config['max_height']           = 2000;
 
         $this->load->library('upload', $config);
 
