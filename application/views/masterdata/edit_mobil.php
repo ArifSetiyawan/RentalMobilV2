@@ -30,24 +30,24 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama Mobil</label>
-                                    <input type="hidden" name="id_mobil" value="<?php echo isset($data_mobil ['id_mobil']) ? $data_mobil['id_mobil'] : ''; ?>">
-                                    <input type="text" class="form-control" name="nama_mobil" value="<?php echo isset($data_mobil ['nama_mobil']) ? $data_mobil['nama_mobil'] : ''; ?>" placeholder="Masukkan Nama Mobil">
+                                    <input type="hidden" name="id_mobil" value="<?php echo $data_mobil['id_mobil'] ?>">
+                                    <input type="text" class="form-control" name="nama_mobil" value="<?php echo isset($data_mobil['nama_mobil']) ? $data_mobil['nama_mobil'] : ''; ?>" placeholder="Masukkan Nama Mobil">
                                 </div>
                                 <div class="form-group">
                                     <label>Merek</label>
-                                    <input type="text" class="form-control" name="merek" value="<?php echo isset($data_mobil ['merek']) ? $data_mobil['merek'] : ''; ?>" placeholder="Masukkan Merek Mobil">
+                                    <input type="text" class="form-control" name="merek" value="<?php echo isset($data_mobil['merek']) ? $data_mobil['merek'] : ''; ?>" placeholder="Masukkan Merek Mobil">
                                 </div>
                                 <div class="form-group">
                                     <label>No Polisi</label>
-                                    <input type="text" class="form-control" name="nopol" value="<?php echo isset($data_mobil ['nopol']) ? $data_mobil['nopol'] : ''; ?>" placeholder="Masukkan No Polisi">
+                                    <input type="text" class="form-control" name="nopol" value="<?php echo isset($data_mobil['nopol']) ? $data_mobil['nopol'] : ''; ?>" placeholder="Masukkan No Polisi">
                                 </div>
                                 <div class="form-group">
                                     <label>Tahun Pembuatan</label>
-                                    <input type="text" class="form-control" name="tahun_buat" value="<?php echo isset($data_mobil ['tahun_buat']) ? $data_mobil['tahun_buat'] : ''; ?>" placeholder="Masukkan Tahun Pembuatan">
+                                    <input type="text" class="form-control" name="tahun_buat" value="<?php echo isset($data_mobil['tahun_buat']) ? $data_mobil['tahun_buat'] : ''; ?>" placeholder="Masukkan Tahun Pembuatan">
                                 </div>
                                 <div class="form-group">
                                     <label>Kapasitas</label>
-                                    <input type="text" class="form-control" name="kapasitas" value="<?php echo isset($data_mobil ['kapasitas']) ? $data_mobil['kapasitas'] : ''; ?>" placeholder="Masukkan Kapasitas Mobil">
+                                    <input type="text" class="form-control" name="kapasitas" value="<?php echo isset($data_mobil['kapasitas']) ? $data_mobil['kapasitas'] : ''; ?>" placeholder="Masukkan Kapasitas Mobil">
                                 </div>
                                 <div class="form-group">
                                     <label>Upload Image</label>
@@ -61,7 +61,7 @@
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Save data</button>
                             </div>
-                        </div>
+                    </div>
                     </form>
                 </div>
             </div>

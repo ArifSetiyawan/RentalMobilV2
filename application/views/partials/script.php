@@ -56,6 +56,7 @@
 </script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
+
 <?php if ($this->session->flashdata('success')) : ?>
     <script type="text/javascript">
         $(document).ready(function() {

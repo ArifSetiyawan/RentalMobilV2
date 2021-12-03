@@ -137,11 +137,11 @@ class Masterdata extends CI_Controller
         $id = $this->input->post('id_mobil', true);
         $where = ['id_mobil' => $id];
 
-        $hasil = $this->model_master->getWhere('m_mobil', ['sha1(id_mobil)' => $id])->row_array();
+        $hasil = $this->model_master->getWhere('m_mobil', ['id_mobil' => $id])->row_array();
+
         $imageUrl = FCPATH . '/upload/mobil/' . $hasil['img_mobil'];
 
         if (file_exists($imageUrl)) {
-
             unlink($imageUrl);
         }
 
@@ -169,11 +169,13 @@ class Masterdata extends CI_Controller
                 'kapasitas' => $this->input->post('kapasitas', true),
                 'img_mobil' => $uploaded_data['file_name'],
             ];
-        
-        $simpan = $this->model_master->updateData('m_mobil', $data, $where);
-        $this->session->set_flashdata('success', "Data Mobil Berhasil Diubah");
-        redirect('masterdata/datamobil');
-    }}
+
+            $simpan = $this->model_master->updateData('m_mobil', $data, $where);
+
+            $this->session->set_flashdata('success', "Data Mobil Berhasil Diubah");
+            redirect('masterdata/datamobil');
+        }
+    }
 
     public function hapusPelanggan()
     {
@@ -323,7 +325,7 @@ class Masterdata extends CI_Controller
         $this->load->library('upload', $config);
 
         if (!$this->upload->do_upload('carfile')) {
-            $data['error'] = $this->upload->display_errors();
+            $this->session->set_flashdata('error', 'Data Gagal Upload');
         } else {
             $uploaded_data = $this->upload->data();
 
