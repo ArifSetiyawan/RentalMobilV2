@@ -224,7 +224,7 @@
 											<div class="row">
 												<div class="col-12">
 													<h2 class="lead"><b>Farhana</b></h2>
-													<p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+													<p class="text-muted text-sm"><b>About: </b> Secundus minimus in quadrigis. Artem et visualem rursus in alta schola studuit. Culturae Coreae et Iaponicae cupidus. </p>
 													<ul class="ml-4 mb-0 fa-ul text-muted">
 														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Github: https://github.com/frhana</li>
 													</ul>
@@ -246,7 +246,7 @@
 											<div class="row">
 												<div class="col-12">
 													<h2 class="lead"><b>Muhammad Arif Setiyawan</b></h2>
-													<p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+													<p class="text-muted text-sm"><b>About: </b> Dux consors. Senior in hac re ac minimus. In progressione website laboravit cum altus schola discipulus erat. </p>
 													<ul class="ml-4 mb-0 fa-ul text-muted">
 														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Github: https://github.com/ArifSetiyawan</li>
 													</ul>
@@ -268,7 +268,7 @@
 											<div class="row">
 												<div class="col-12">
 													<h2 class="lead"><b>Muhammad Daniel Nurindra</b></h2>
-													<p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+													<p class="text-muted text-sm"><b>About: </b> In eget orci est. Prodigialis, Verus scurra et ineptus. Sed ille certas currus amat. </p>
 													<ul class="ml-4 mb-0 fa-ul text-muted">
 														<li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Github: https://github.com/BarrenLand</li>
 													</ul>
