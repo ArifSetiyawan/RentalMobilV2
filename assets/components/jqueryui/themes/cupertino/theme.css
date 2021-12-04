@@ -34,19 +34,19 @@
 .ui-widget-content {
 	border: 1px solid #dddddd;
 	background: #f2f5f7 url("images/ui-bg_highlight-hard_100_f2f5f7_1x100.png") 50% top repeat-x;
-	color: #362b36;
+	color: #01004d;
 }
 .ui-widget-content a {
-	color: #362b36;
+	color: #01004d;
 }
 .ui-widget-header {
 	border: 1px solid #aed0ea;
 	background: #deedf7 url("images/ui-bg_highlight-soft_100_deedf7_1x100.png") 50% 50% repeat-x;
-	color: #222222;
+	color: #01004d;
 	font-weight: bold;
 }
 .ui-widget-header a {
-	color: #222222;
+	color: #01004d;
 }
 
 /* Interaction states
@@ -63,7 +63,7 @@ html .ui-button.ui-state-disabled:active {
 	border: 1px solid #aed0ea;
 	background: #d7ebf9 url("images/ui-bg_glass_80_d7ebf9_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
-	color: #2779aa;
+	color: #31217a;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -72,7 +72,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #2779aa;
+	color: #31217a;
 	text-decoration: none;
 }
 .ui-state-hover,
