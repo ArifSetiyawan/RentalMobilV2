@@ -49,7 +49,7 @@
             </li>
         <?php } ?>
         <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="<?php echo base_url(); ?>transaksi" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                     Transaksi Peminjaman

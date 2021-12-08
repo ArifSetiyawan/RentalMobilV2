@@ -16,7 +16,7 @@ class Masterdata extends CI_Controller
         $user_access = $this->session->userdata();
 
         if ($user_access != null) {
-            if ($user_access['email'] == null) {
+            if ($user_access['role'] == null) {
                 $this->session->set_flashdata('warning', 'Maaf Anda Harus Login kembali');
                 redirect('auth');
             }
@@ -204,7 +204,7 @@ class Masterdata extends CI_Controller
         $data = [
             'email' => $this->input->post('email', true),
             'password' => sha1($this->input->post('password', true)),
-            'role' => 2,
+            'role' => $this->input->post('roleUser', true),
             'isAktif' => 1
         ];
 

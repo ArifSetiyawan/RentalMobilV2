@@ -68,10 +68,10 @@
                         <div class="col-12 mb-2">
                             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                         </div>
-                        <div class="col-12">
+                        <!--<div class="col-12">
                             <a href="<?php echo base_url('auth/register') ?>" class="btn btn-success btn-block">Don't have an account ? Register Now</a>
 
-                        </div>
+                        </div> -->
                         <!-- /.col -->
 
                         <!-- /.col -->

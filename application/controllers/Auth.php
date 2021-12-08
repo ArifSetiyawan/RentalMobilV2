@@ -59,16 +59,6 @@ class Auth extends CI_Controller
         }
     }
 
-    public function usernameCheck()
-    {
-        $dataSend = json_decode($this->input->post('datasend'), TRUE);
-        $params = [
-            "UserName"         => $dataSend['userEmail'],
-            "Method"         => "validate"
-        ];
-        $verif_username = $this->authorization->cekUsername($params);
-        echo json_encode($verif_username);
-    }
     public function logout()
     {
         $this->session->sess_destroy();

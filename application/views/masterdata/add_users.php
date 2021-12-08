@@ -26,7 +26,7 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="<?php echo base_url('masterdata/simpan_data_user');?>" method ="post">
+                        <form action="<?php echo base_url('masterdata/simpan_data_user'); ?>" method="post">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Email address</label>
@@ -35,6 +35,13 @@
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label>Role User</label>
+                                    <select class="form-control" name="roleUser">
+                                        <option value="1">Superadmin</option>
+                                        <option value="2">Pelanggan</option>
+                                    </select>
                                 </div>
                             </div>
                             <!-- /.card-body -->

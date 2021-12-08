@@ -43,6 +43,9 @@
         $("#data-users").DataTable({
             "responsive": true,
         });
+        $("#data-trx").DataTable({
+            "responsive": true,
+        });
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,
