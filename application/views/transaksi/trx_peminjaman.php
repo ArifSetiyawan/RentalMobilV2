@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div style="text-align: right;">
-                            <a href="<?php echo base_url() ?>masterdata/add_users" class="btn btn-primary">
+                            <a href="<?php echo base_url() ?>transaksi/add_trx" class="btn btn-primary">
                                 <i class="fa fa-plus"></i>
                                 Tambah Transaksi
                             </a>

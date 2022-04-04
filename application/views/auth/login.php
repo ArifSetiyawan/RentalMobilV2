@@ -22,7 +22,7 @@
 <style>
     .login-page,
     .register-page {
-        background-image: url('<?php echo base_url(); ?>assets/images/bg-3.png');
+        background-image: url('<?php echo base_url(); ?>assets/images/bg-2.jpg');
         background-size: cover;
     }
 

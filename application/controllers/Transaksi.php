@@ -40,4 +40,32 @@ class Transaksi extends CI_Controller
         $this->load->library('template');
         $this->template->loadx('master', 'transaksi/trx_peminjaman', $data);
     }
+
+    public function add_trx()
+    {
+        $this->validate_user();
+        $data = array(
+            'title' => "Transaksi",
+            'active_menu' => 'trx_pinjam',
+            'data_mobil' => $this->model_master->getAll('m_mobil')->result_array()
+            // 'data_pinjam' => $this->model_trx->getJoinTrx()->result_array()
+        );
+
+        $this->load->library('template');
+        $this->template->loadx('master', 'transaksi/add_trx', $data);
+    }
+
+    public function add_trx_form()
+    {
+        $this->validate_user();
+        $data = array(
+            'title' => "Transaksi",
+            'active_menu' => 'trx_pinjam',
+            'data_mobil' => $this->model_master->getAll('m_mobil')->result_array()
+            // 'data_pinjam' => $this->model_trx->getJoinTrx()->result_array()
+        );
+
+        $this->load->library('template');
+        $this->template->loadx('master', 'transaksi/add_trx_form', $data);
+    }
 }
