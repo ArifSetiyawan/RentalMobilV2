@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>UBSI</title>
+    <title>Murifiya Rental Car</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,7 @@
 <style>
     .login-page,
     .register-page {
-        background-image: url('<?php echo base_url(); ?>assets/images/bg-2.jpg');
+        background-image: url('<?php echo base_url(); ?>assets/images/Mobil.jpg');
         background-size: cover;
     }
 
@@ -35,6 +35,10 @@
     .register-logo a {
         color: #fff;
     }
+
+    .login-box {
+        width: 360px;
+    }
 </style>
 
 <body class="hold-transition login-page">
@@ -42,14 +46,15 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="#" class="h1"><b>UBSI</b>RENTCAM</a>
+                <img src="<?php echo base_url(); ?>assets/userpage/images/logo.png" alt="AdminLTE Logo" class="" width="250">
+
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start application</p>
 
                 <form action="<?php echo base_url('auth/login') ?>" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" class="form-control" placeholder="Email" id="email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -57,7 +62,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -68,10 +73,10 @@
                         <div class="col-12 mb-2">
                             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                         </div>
-                        <!--<div class="col-12">
-                            <a href="<?php echo base_url('auth/register') ?>" class="btn btn-success btn-block">Don't have an account ? Register Now</a>
+                        <div class="col-12">
+                            <a href="<?php echo base_url('auth/register') ?>" class="btn btn-success btn-block">Tidak Punya Akun ? Register Sekarang</a>
 
-                        </div> -->
+                        </div>
                         <!-- /.col -->
 
                         <!-- /.col -->
@@ -92,6 +97,11 @@
     <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.min.js"></script>
+
+    <script>
+        
+    </script>
+
     <?php if ($this->session->flashdata('success')) : ?>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -102,14 +112,14 @@
     <?php if ($this->session->flashdata('error')) : ?>
         <script type="text/javascript">
             $(document).ready(function() {
-                swal("Sorry!", "<?php echo $_SESSION['error'] ?>", "error");
+                swal("", "<?php echo $_SESSION['error'] ?>", "error");
             });
         </script>
     <?php endif; ?>
     <?php if ($this->session->flashdata('warning')) : ?>
         <script type="text/javascript">
             $(document).ready(function() {
-                swal("Warning!", "<?php echo $_SESSION['warning'] ?>", "warning");
+                swal("", "<?php echo $_SESSION['warning'] ?>", "warning");
             });
         </script>
     <?php endif; ?>

@@ -34,12 +34,28 @@ class Trxpinjam extends CI_Model
     {
         $this->db->update($tabel, $data, $where);
     }
-    public function getJoinTrx()
+    public function getJoinTrx($whereCust = null, $whereRent = null, $whereRole = NULL)
     {
-        $this->db->select('trp.id_pinjam, trp.tgl_pinjam ,trp.metode_pembayaran, trp.durasi_peminjaman , trp.diskon , mm.nama_mobil, mm.tahun_buat, mp.nama');
-        $this->db->from('trx_peminjaman as trp');
-        $this->db->join('m_mobil as mm', 'trp.mobil = mm.id_mobil');
-        $this->db->join('m_pelanggan as mp', 'trp.customer = mp.id_pelanggan');
+        $this->db->select('tbr.*, tbc.*, tbm.*, tbl.*, tts.*');
+        $this->db->from('tblt_rental as tbr');
+        $this->db->join('customer as tbc', 'tbr.id_customer = tbc.Id_cust');
+        $this->db->join('mobil as tbm', 'tbr.id_mobil = tbm.Id_mobil');
+        $this->db->join('layanan as tbl', 'tbr.id_layanan = tbl.Id_layanan');
+        $this->db->join('status as tts', 'tbr.id_status = tts.Id_Status');
+
+        if ($whereCust != null) {
+            $this->db->where('id_customer', $whereCust);
+        }
+
+        if ($whereRole != null) {
+            if ($whereRole == 3) {
+                $this->db->where_in('tbr.id_status', ['1', '8']);
+            }
+        }
+
+        if ($whereRent != null) {
+            $this->db->where('sha1(id_rental)', $whereRent);
+        }
 
         return $this->db->get();
     }

@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rental Mobil | UBSI</title>
+    <title>MURIFIYA | RENTCAR</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -33,6 +33,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -66,8 +67,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light"><b>RENTCAR UBSI</b></span>
+                <img src="<?php echo base_url(); ?>assets/images/10.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="500">
+                <span class="brand-text font-weight-light"><b>MURIFIYA RENTAL</b></span>
             </a>
 
             <!-- Sidebar -->
@@ -82,9 +83,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <?php echo $body; ?>
 
         <footer class="main-footer">
-            <strong>UBSI RENTAL MOBIL 2022</strong>
+            <strong>MURIFIYA</strong>
             <div class="float-right d-none d-sm-inline-block">
-                <b>Web Programming</b>
+                <b>RENTAL CAR 2023</b>
             </div>
         </footer>
         <!-- Control Sidebar -->
@@ -94,7 +95,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-
+    
     <?php $this->load->view('partials/script'); ?>
 </body>
 

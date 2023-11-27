@@ -35,6 +35,7 @@
 <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/dist/js/pages/dashboard.js"></script>
+
 <script>
     $(document).ready(function() {
         $.extend($.fn.dataTable.defaults, {
@@ -56,6 +57,11 @@
             "responsive": true,
         });
     });
+    $(".custom-file-input").on("change", function() {
+        var file = $(this)[0].files[0];
+        $(this).next(".custom-file-label").text(file.name);
+        this.value.replace("C:\\fakepath\\", "");
+    });
 </script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
@@ -70,14 +76,14 @@
 <?php if ($this->session->flashdata('error')) : ?>
     <script type="text/javascript">
         $(document).ready(function() {
-            swal("Sorry!", "<?php echo $_SESSION['error'] ?>", "error");
+            swal("", "<?php echo $_SESSION['error'] ?>", "error");
         });
     </script>
 <?php endif; ?>
 <?php if ($this->session->flashdata('warning')) : ?>
     <script type="text/javascript">
         $(document).ready(function() {
-            swal("Warning!", "<?php echo $_SESSION['warning'] ?>", "warning");
+            swal("", "<?php echo $_SESSION['warning'] ?>", "warning");
         });
     </script>
 <?php endif; ?>
